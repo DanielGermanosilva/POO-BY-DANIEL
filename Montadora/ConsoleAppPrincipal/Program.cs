@@ -1,10 +1,12 @@
-﻿namespace ConsoleAppPrincipal
+﻿using Models;
+
+namespace ConsoleAppPrincipal
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Pneu pneu1;
         }
     }
 }
