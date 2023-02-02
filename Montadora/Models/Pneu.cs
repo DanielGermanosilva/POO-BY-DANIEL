@@ -12,6 +12,9 @@
         public int Velocidadeatual { get; set; }
         public bool Estepe { get; set; }
 
+        public bool Furado { get; set; }
+        public string Marca { get; set; }
+
 
         public Pneu()
         {
