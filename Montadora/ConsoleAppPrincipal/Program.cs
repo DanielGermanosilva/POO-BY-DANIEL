@@ -15,7 +15,7 @@ namespace ConsoleAppPrincipal
             pneu1.Estourado = false;
             pneu1.Tipo = "Rua";
             pneu1.TWI = false;
-            pneu1.Velocidadeatual = 0;
+          
 
             
 
@@ -28,7 +28,7 @@ namespace ConsoleAppPrincipal
             pneu2.Estourado = true;
             pneu2.Tipo = "Rua";
             pneu2.TWI = false;
-            pneu2.Velocidadeatual = 0;
+          
 
 
 
