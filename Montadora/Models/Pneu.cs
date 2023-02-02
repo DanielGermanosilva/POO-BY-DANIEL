@@ -12,7 +12,7 @@
         public int Velocidadeatual { get; set; }
         public bool Estepe { get; set; }
 
-         
+
         public Pneu()
         {
             Velocidadeatual = 0;
@@ -55,16 +55,16 @@
 
         public void Exibirinfopneu()
         {
-           
+
             Console.WriteLine("Aro: " + Aro);
             Console.WriteLine("Percentual Borracha: " + PERCENTUALBORRACHA);
-            Console.WriteLine("Cor: "+Cor);
-            Console.WriteLine("Velocidade Maxima: "+ Velocidademaxima);
+            Console.WriteLine("Cor: " + Cor);
+            Console.WriteLine("Velocidade Maxima: " + Velocidademaxima);
             Console.WriteLine("Estepe: " + Estepe);
             Console.WriteLine("Estourado: " + Estourado);
-            Console.WriteLine("Tipo: "+ Tipo);
-            Console.WriteLine("TWI: "+ TWI);
-            Console.WriteLine("Velocidade Atual: "+ Velocidadeatual);
+            Console.WriteLine("Tipo: " + Tipo);
+            Console.WriteLine("TWI: " + TWI);
+            Console.WriteLine("Velocidade Atual: " + Velocidadeatual);
 
 
 
