@@ -12,12 +12,18 @@
         public int Velocidadeatual { get; set; }
         public bool Estepe { get; set; }
 
+         
+        public Pneu()
+        {
+            Velocidadeatual = 0;
+        }
+
         public void Girar(int _velocidade)
         {
             Velocidadeatual = Velocidadeatual + _velocidade;
             PERCENTUALBORRACHA = PERCENTUALBORRACHA - 3;
-            
-            if (Velocidadeatual > Velocidademaxima || PERCENTUALBORRACHA <=30)
+
+            if (Velocidadeatual > Velocidademaxima || PERCENTUALBORRACHA <= 30)
             {
                 Estourarpneu();
             }
@@ -33,7 +39,7 @@
             Velocidadeatual = Velocidadeatual - _reducao;
             PERCENTUALBORRACHA = PERCENTUALBORRACHA - 5;
 
-            if (PERCENTUALBORRACHA <=30)
+            if (PERCENTUALBORRACHA <= 30)
             {
                 Estourarpneu();
             }
@@ -47,7 +53,26 @@
 
 
 
+        public void Exibirinfopneu()
+        {
+           
+            Console.WriteLine("Aro: " + Aro);
+            Console.WriteLine("Percentual Borracha: " + PERCENTUALBORRACHA);
+            Console.WriteLine("Cor: "+Cor);
+            Console.WriteLine("Velocidade Maxima: "+ Velocidademaxima);
+            Console.WriteLine("Estepe: " + Estepe);
+            Console.WriteLine("Estourado: " + Estourado);
+            Console.WriteLine("Tipo: "+ Tipo);
+            Console.WriteLine("TWI: "+ TWI);
+            Console.WriteLine("Velocidade Atual: "+ Velocidadeatual);
 
+
+
+
+
+
+
+        }
 
 
     }
