@@ -15,6 +15,8 @@ namespace ConsoleAppPrincipal
             pneu1.Estourado = false;
             pneu1.Tipo = "Rua";
             pneu1.TWI = false;
+            pneu1.Furado = false;
+            pneu1.Marca = "Michelin";
 
             Pneu pneu2 = new Pneu();
             pneu2.Aro = 16;
@@ -25,7 +27,9 @@ namespace ConsoleAppPrincipal
             pneu2.Estourado = true;
             pneu2.Tipo = "Rua";
             pneu2.TWI = false;
-          
+            pneu2.Furado = false;
+            pneu2.Marca = "Michelin";
+
 
 
 

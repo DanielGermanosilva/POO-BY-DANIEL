@@ -68,6 +68,8 @@
             Console.WriteLine("Tipo: " + Tipo);
             Console.WriteLine("TWI: " + TWI);
             Console.WriteLine("Velocidade Atual: " + Velocidadeatual);
+            Console.WriteLine("Marca: " + Marca);
+            Console.WriteLine("Furado: " + Furado);
 
 
 
