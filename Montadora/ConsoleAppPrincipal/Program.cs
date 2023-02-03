@@ -23,7 +23,7 @@ namespace ConsoleAppPrincipal
             pneu2.PERCENTUALBORRACHA = 100;
             pneu2.Cor = "Preto";
             pneu2.Velocidademaxima = 70;
-            pneu2.Estepe = false;
+            pneu2.Estepe = true;
             pneu2.Estourado = false;
             pneu2.Tipo = "Rua";
             pneu2.TWI = false;
