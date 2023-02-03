@@ -13,7 +13,7 @@
         public bool Estepe { get; set; }
 
         public bool Furado { get; set; }
-        public string Marca { get; set; }
+        public string Marca { get; set; } = string.Empty;
 
 
         public Pneu()
@@ -23,6 +23,18 @@
 
         public void Girar(int _velocidade)
         {
+
+            if(Estourado == true)
+            {
+                Console.WriteLine("O Pneu esta estourado!");
+                return;
+            }
+            if(Furado == true)
+            {
+                Console.WriteLine("O Pneu esta furado!");
+                return;
+            }
+
             Velocidadeatual = Velocidadeatual + _velocidade;
             PERCENTUALBORRACHA = PERCENTUALBORRACHA - 3;
 

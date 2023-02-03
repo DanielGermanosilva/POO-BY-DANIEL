@@ -24,7 +24,7 @@ namespace ConsoleAppPrincipal
             pneu2.Cor = "Preto";
             pneu2.Velocidademaxima = 70;
             pneu2.Estepe = false;
-            pneu2.Estourado = true;
+            pneu2.Estourado = false;
             pneu2.Tipo = "Rua";
             pneu2.TWI = false;
             pneu2.Furado = false;
