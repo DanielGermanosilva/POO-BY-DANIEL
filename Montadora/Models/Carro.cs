@@ -14,14 +14,14 @@ namespace Models
         public int Odometro { get; set; } // 10000
         public int Ano { get; set; } // 2022
         public string? Placa { get; set; } // qgb 6652
-        public int VelocidadeMaximaCarro { get; set; } // 300 km/h
+        public int VelocidadeMaxima { get; set; } // 300 km/h
         public bool CambioManual { get; set; } // true / false
         public string? Qtd_Acentos { get; set; } // 2,5,7,9
         public string? PesoCarro { get; set; } // 1000 kilos
         public bool ArCondicionado { get; set; } // true / false
         public int NivelCombustivel { get; set; } // 100
         public bool CarroLigado { get; set; } // ligado bateria
-       
+
 
         public Pneu PneuDianteiroEsquerdo { get; set; }
         public Pneu PneuDianteiroDireito { get; set; }
@@ -34,12 +34,13 @@ namespace Models
 
 
 
-        public Carro(String _marca, string _Modelo, int _ano, int _velocidadeMaximaCarro, string _placa)
+        public Carro(String _marca, string _Modelo, int _ano, int _velocidadeMaxima, string _placa)
         {
             Fabricante = _marca;
             Modelo = _Modelo;
             Ano = _ano;
-            VelocidadeMaximaCarro = _velocidadeMaximaCarro;
+            VelocidadeMaxima = _velocidadeMaxima;
+            VelocidadeAtual = 0
             Placa = _placa;
             Odometro = 0;
             CarroLigado = false;
@@ -50,14 +51,35 @@ namespace Models
             PneuTraseiroDireito = new Pneu(16, 150, "Carro Passeio");
             PneuTraseiroDireito = new Pneu(16, 150, "Carro Passeio");
             PneuEstepe = new Pneu(16, 70, "Espete", true);
-            
+
         }
 
-        public void LigarCarro()
+        public void Ligar()
+        {
+            if (CarroLigado == true)
+            {
+                Console.WriteLine("O carro esta ligado");
+                return
+            }
+            else
+            {
+                if (NivelCombustivel > 0)
+                {
+                    CarroLigado = true;
+                }
+            }
+        }
+
+        public void Deligar()
         {
 
+            CarroLigado = false;
+            VelocidadeAtual = 0;
+            PneuDianteiroDireito.Velocidadeatual = 0;
+            PneuDianteiroEsquerdo.Velocidadeatual = 0;
+            PneuTraseiroDireito.Velocidadeatual = 0;
+            PneuTraseiroEsquerdo.Velocidadeatual = 0;
         }
-
         public void Acelerar()
         {
 
