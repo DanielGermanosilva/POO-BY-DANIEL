@@ -16,10 +16,18 @@
         public string Marca { get; set; } = string.Empty;
 
 
-        public Pneu()
+        public Pneu(int _aro, int _velocidademaxima, string _tipo, bool _estepe=false)
         {
+            Aro = _aro;
+            Tipo = _tipo;
+            Velocidademaxima = _velocidademaxima;
+            Estepe = _estepe;
             Velocidadeatual = 0;
-        }
+            Estourado = false;
+            TWI = false;
+            Cor = "Preto";
+            PERCENTUALBORRACHA = 100;
+       }
 
         public void Girar(int _velocidade)
         {

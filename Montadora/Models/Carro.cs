@@ -41,7 +41,7 @@ namespace Models
             Modelo = _Modelo;
             Ano = _ano;
             VelocidadeMaxima = _velocidadeMaxima;
-            VelocidadeAtual = 0
+            VelocidadeAtual = 0;
             Placa = _placa;
             Odometro = 0;
             CarroLigado = false;
@@ -57,18 +57,12 @@ namespace Models
 
         public void Ligar()
         {
-            if (CarroLigado == true)
-            {
-                Console.WriteLine("O carro esta ligado");
-                return;
-            }
-            else
-            {
+           
                 if (NivelCombustivel > 0)
                 {
                     CarroLigado = true;
                 }
-            }
+            
         }
 
         public void Deligar()
