@@ -21,6 +21,7 @@ namespace Models
         public bool ArCondicionado { get; set; } // true / false
         public int NivelCombustivel { get; set; } // 100
         public bool CarroLigado { get; set; } // ligado bateria
+        public int VelocidadeAtual { get; set; }
 
 
         public Pneu PneuDianteiroEsquerdo { get; set; }
@@ -59,7 +60,7 @@ namespace Models
             if (CarroLigado == true)
             {
                 Console.WriteLine("O carro esta ligado");
-                return
+                return;
             }
             else
             {
