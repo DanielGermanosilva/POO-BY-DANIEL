@@ -57,12 +57,12 @@ namespace Models
 
         public void Ligar()
         {
-           
-                if (NivelCombustivel > 0)
-                {
-                    CarroLigado = true;
-                }
-            
+
+            if (NivelCombustivel > 0)
+            {
+                CarroLigado = true;
+            }
+
         }
 
         public void Deligar()
@@ -75,20 +75,43 @@ namespace Models
             PneuTraseiroDireito.Velocidadeatual = 0;
             PneuTraseiroEsquerdo.Velocidadeatual = 0;
         }
-        public void Acelerar()
+        public void Acelerar(int _inpulso)
         {
-
+            PneuDianteiroDireito.Velocidadeatual = 0;
+            PneuDianteiroEsquerdo.Velocidadeatual = 0;
+            PneuTraseiroDireito.Velocidadeatual = 0;
+            PneuTraseiroEsquerdo.Velocidadeatual = 0;
         }
 
         public void Frear()
         {
-
+            PneuDianteiroDireito.Velocidadeatual = 0;
+            PneuDianteiroEsquerdo.Velocidadeatual = 0;
+            PneuTraseiroDireito.Velocidadeatual = 0;
+            PneuTraseiroEsquerdo.Velocidadeatual = 0;
 
         }
 
 
-        public void Abastecer()
+        public void Abastecer(int _quantidadecombustivel > 100)
+
         {
+            if (_quantidadecombustivel == 0)
+            {
+                _quantidadecombustivel = 100 - NivelCombustivel;
+            }
+
+            if (NivelCombustivel + _quantidadecombustivel > 100)
+            {
+                Console.WriteLine("A quantidade de combustivel ultrapassa o limite do tanque")
+                    return;
+            }
+
+            if (NivelCombustivel < 100)
+            {
+                NivelCombustivel = NivelCombustivel + _quantidadecombustivel;
+            }
+
 
         }
 
